@@ -15,6 +15,7 @@ services:
       - 5432:5432
 ```
 Start container with  `docker-compose up`.
+
 2. Import testset_B.tsv into the SQL DB.
 
 Copy file to docker container `docker cp testset_B.tsv <container-id>:/tmp/`
