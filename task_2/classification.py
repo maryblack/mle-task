@@ -80,6 +80,12 @@ class MultiClassificator:
         model.fit(X, y)
         model.save_model(MultiClassificator.MODEL_FILENAME)
 
+    def eval_model(self, df):
+        model = xgb.XGBClassifier()
+        model.load_model(MultiClassificator.MODEL_FILENAME)
+        pred = model.predict(df[MultiClassificator.FEATURES])
+        return pred
+
     def predict(self, text: str) -> str:
         mapping_values = {
             0: "WASHINGMACHINES",
@@ -94,4 +100,3 @@ class MultiClassificator:
         pred = model.predict(self.preprocess(input)[MultiClassificator.FEATURES])
         pred_value = pred[0]
         return mapping_values[pred_value]
-
