@@ -12,8 +12,8 @@ class ClassificationTest(unittest.TestCase):
         self.assertEqual(MultiClassificator().predict("LEEF IBRIDGE MOBILE SPEICHERERWEITERUNG FUER IPHONE, IPAD UND IPOD - MIT LIGHTNING UND USB, 128 GB"), "USB MEMORY")
 
     def test_accuracy(self):
-        pred = MultiClassificator().eval_model(pd.read_csv("task_2/test/testset.csv"))
-        true = pd.read_csv("task_2/test/testset_labels.csv")
+        pred = MultiClassificator().eval_model(pd.read_csv("/task_2/test/testset.csv"))
+        true = pd.read_csv("/task_2/test/testset_labels.csv")
         accuracy = accuracy_score(pred, true)
         self.assertGreater(accuracy, 0.9)
 
