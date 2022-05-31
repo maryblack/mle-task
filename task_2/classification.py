@@ -12,16 +12,13 @@ class MultiClassificator:
         df["is_usb"] = (
                 df["text"].str.contains("usb")
                 | df["text"].str.contains("memory")
-                | df["text"].
-                str.contains("datentraeger")
+                | df["text"].str.contains("datentraeger")
                 | df["text"].str.contains("speicher")
                 | df["text"].str.contains("storage")
         ).astype("int")
 
         df["is_washingmachine"] = (
                 df["text"].str.contains("wasch")
-                | df["text"].str.contains("wash")
-                | df["text"].str.contains("wasch")
                 | df["text"].str.contains("wash")
         ).astype("int")
 
