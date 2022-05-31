@@ -3,7 +3,8 @@ import xgboost as xgb
 
 
 class MultiClassificator:
-    MODEL_FILENAME = "task_2/task_2_model.json"
+    # MODEL_FILENAME = "./test/task_2_model.json"
+    MODEL_FILENAME = "task_2_model.json"
     FEATURES = ['is_usb', 'is_washingmachine', 'is_lenses', 'is_bicycle']
 
     @staticmethod
@@ -100,3 +101,5 @@ class MultiClassificator:
         pred = model.predict(self.preprocess(input)[MultiClassificator.FEATURES])
         pred_value = pred[0]
         return mapping_values[pred_value]
+
+
