@@ -30,4 +30,4 @@ jobs:
       - name: Run classification tests
         run: python -m unittest task_2/test/task_2_test.py
       - name: Run api test
-        run: python -m unittest task_2/test/task_2_test_api.py
+        run: pytest task_2/test/task_2_test_api.py
