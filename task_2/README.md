@@ -9,7 +9,7 @@ Multi classification task
 
 to get answer replace `"PUT YOUR TEXT HERE"` with article text
 ```bash
-curl -X POST http://127.0.0.1:5000/api/classify --header 'Content-Type: application/json' \
+curl -X POST host:port/api/classify --header 'Content-Type: application/json' \
 --data-raw '{
     "text": "PUT YOUR TEXT HERE"
 }'
