@@ -16,7 +16,7 @@ curl -X POST host:port/api/classify --header 'Content-Type: application/json' \
 }'
 ```
 
-3. Tests
+3. Tests 
+![CI](https://github.com/maryblack/mle-task/workflows/CI/badge.svg)
 
 Test API and test classification results separately.
-![CI](https://github.com/maryblack/mle-task/workflows/CI/badge.svg)
