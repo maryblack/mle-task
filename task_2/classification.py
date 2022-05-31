@@ -4,7 +4,7 @@ import xgboost as xgb
 
 class MultiClassificator:
     # MODEL_FILENAME = "./test/task_2_model.json"
-    MODEL_FILENAME = "task_2_model.json"
+    MODEL_FILENAME = "/task_2/test/task_2_model.json"
     FEATURES = ['is_usb', 'is_washingmachine', 'is_lenses', 'is_bicycle']
 
     @staticmethod
